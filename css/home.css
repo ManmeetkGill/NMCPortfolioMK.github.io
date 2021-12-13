@@ -1,0 +1,26 @@
+.mainTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+}
+
+.header {
+  text-align: center;
+  color: #eee;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header h1 {
+  transform: translateX(-100rem);
+  animation: slideIn 2s forwards;
+}
+.header h2 {
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  transform: translateX(100rem);
+  animation: slideIn 2s forwards;
+}
