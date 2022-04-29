@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10;
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  /* This make sure that we move the navbar all the way to the left to make the transition happen, that you don't get a scroll
+  bar. Instead it's jus gonna look like your navbar dissapeared. */
+  width: 100%;
+  height: 1100px;
+  /* Linear gradient allows me to reduce opacity and also bring a dark film over the picture to show the picture better */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("http://www.thenocturnaltimes.com/wp-content/uploads/2017/06/New-York-Nightlife-3-via-World-Visits.jpg")
+      center no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+/* NAV BAR STYLING */
+a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.container {
+  max-width: 120rem;
+  width: 90%;
+  /* Sets the top and bottom margins to zero and the left and right margins to auto */
+  /* Specifying auto tells the browser to autmatically determine the left and right margins itself (guarantees that the left and right margins will be set to the same size */
+  margin: 0 auto;
+}
+
+nav {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.brand {
+  font-size: 2rem;
+  font-weight: 300;
+  transform: translateX(-100rem);
+  animation: slideIn 0.5s forwards;
+}
+/* Changes MK to something else */
+.brand span {
+  color: red;
+  font-size: 3rem;
+  text-decoration: underline red;
+}
+
+nav ul {
+  display: flex;
+}
+
+/* Transform: translates everything that starts with li 100 rem to the right so it dissapears to the right.  */
+/* animation: Uses keyframes to make animation slide in back to original position */
+nav ul li {
+  list-style: none;
+  transform: translateX(100rem);
+  animation: slideIn 0.5s forwards;
+}
+
+/* This separates out each child of li and puts an animation delay so that they come in at dufferent times */
+nav ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+nav ul li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+nav ul li:nth-child(3) {
+  animation-delay: 1s;
+}
+nav ul li:nth-child(4) {
+  animation-delay: 1.5s;
+}
+nav ul li:nth-child(5) {
+  animation-delay: 2s;
+}
+nav ul li:nth-child(6) {
+  animation-delay: 2.5s;
+}
+/* End of separation between child */
+
+nav ul li a {
+  /* Sets the top and bottom to 1rem and left/right to 0 */
+  padding: 1rem 0;
+  /* Sets top/bottom to 0 and left/right to 3rem */
+  margin: 0 3rem;
+  /* This way the links move in position relative to ther other links */
+  position: relative;
+  /* Makes the spacing nice! */
+  letter-spacing: 2px;
+}
+nav ul li a:last-child {
+  /* Originally, there a bit of extra space and by putting the margin of the last child to 0, we acert that problem  */
+  margin-right: 0;
+}
+
+/* Puts the lines on the top and bottom of the navbar links */
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  left: 0;
+  /* scaleX(0) means original positions */
+  transform: scaleX(0);
+  /* Makes a transition of 0.5 seconds for the lines */
+  transition: all 0.5s;
+}
+
+nav ul li a::before {
+  top: 0;
+  /* means start the line from the left */
+  transform-origin: left;
+}
+
+nav ul li a::after {
+  bottom: 0;
+  /* means start the line from the right */
+  transform-origin: right;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  /* This means when you hover over the links the transform will move the lines so that extend like they're
+  supposed to. */
+  transform: scaleX(1);
+}
+
+/* This creates a keyframe function that allows us to translate navbar to original position */
+@keyframes slideIn {
+  from {
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 1274px) {
+  body {
+    height: 125vh;
+  }
+}

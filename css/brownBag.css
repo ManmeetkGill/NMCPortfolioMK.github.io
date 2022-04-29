@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+.square {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 800px;
+  margin-top: 2rem;
+  margin-bottom: 2 rem;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 5%;
+  /* transform: translateY(0); */
+  animation: dissaSlide 3s;
+}
+
+@keyframes dissaSlide {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.current {
+  color: red;
+}
+
+.Me {
+  border: 1px solid crimson;
+}
+
+h2,
+h3 {
+  color: lightgray;
+}
+.contain {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 25rem;
+}
+
+.smallSquare {
+  position: relative;
+  height: 30rem;
+  margin-left: 30px;
+  margin-top: 9rem;
+  width: 25rem;
+  border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 50px rgba(255, 0, 0, 0.5);
+}
+
+.pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.pic img {
+    height: 150px;
+  margin-top: 1rem;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 10%;
+}
+
+.description {
+  color: lightgray;
+  text-align: center;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.contain2 {
+  position: absolute;
+  margin-right: 7rem;
+  margin-left: 27rem;
+  margin-top: 9rem;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 1vw;
+  color: lightgray;
+}
+
+.intro h1 {
+  text-decoration: underline;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.intro h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: bolder;
+}
+.intro p {
+  font-size: 1rem;
+}
+
+.google {
+    text-decoration: underline;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.google a {
+    color: red;
+}
+
+@media only screen and (max-width: 1274px) {
+  .contain {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  .smallSquare {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .contain2 {
+    position: relative;
+    margin: auto;
+  }
+
+  .intro {
+    margin-top: 4px;
+  }
+  .square {
+    height: 100vh;
+  }
+}

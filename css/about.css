@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+.square {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 700px;
+  margin-top: 2rem;
+  margin-bottom: 2 rem;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 5%;
+  /* transform: translateY(0); */
+  animation: dissaSlide 3s;
+}
+
+@keyframes dissaSlide {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.current {
+  color: red;
+}
+
+.Me {
+  border: 1px solid crimson;
+}
+
+h2,
+h3 {
+  color: lightgray;
+}
+.contain {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 25rem;
+}
+.smallSquare {
+  position: relative;
+  height: 30rem;
+  margin-left: 1rem;
+  margin-top: 9rem;
+  width: 25rem;
+  border-radius: 10%;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 50px rgba(255, 0, 0, 0.5);
+}
+
+.pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pic img {
+  margin-top: 1rem;
+  border-radius: 10%;
+}
+
+.description {
+  color: lightgray;
+  text-align: center;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.contain2 {
+  position: absolute;
+  margin-right: 7rem;
+  margin-left: 27rem;
+  margin-top: 9rem;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 1vw;
+  color: lightgray;
+}
+
+.intro h1 {
+  text-decoration: underline;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.intro h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: bolder;
+}
+.intro p {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 1274px) {
+  .contain {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  .smallSquare {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .contain2 {
+    position: relative;
+    margin: auto;
+  }
+
+  .intro {
+    margin-top: 4px;
+  }
+  .square {
+    height: 100vh;
+  }
+}
+
+/*
+.about-wrapper {
+  height: 50vh;
+}
+.about-left {
+  background: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 38vh;
+  width: 35vh;
+  border-radius: 5%;
+  margin-top: 10%;
+}
+
+.about-left-content > div {
+  background: lime;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.about-left-content {
+  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+}
+
+.about-img img {
+  display: flexbox;
+  width: 200px;
+  border-radius: 5%;
+}
+
+ .All {
+  display: flex;
+}
+
+.pic {
+  height: auto;
+  border-radius: 5%;
+  margin: 30px;
+  float: left;
+}
+.info {
+  position: relative;
+  color: lightgray;
+  margin-top: 30px;
+  margin-bottom: 480px;
+  margin-right: 30px;
+  margin-top: 100px;
+  font-family: "Roboto Slab", serif;
+} */
